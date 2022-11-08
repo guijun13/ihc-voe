@@ -9,6 +9,7 @@ import {
   Luggage,
   PeopleAlt,
   Person,
+  Search,
 } from '@mui/icons-material';
 import HomeIcon from '@mui/icons-material/Home';
 import {
@@ -19,7 +20,9 @@ import {
   MenuItem,
   Radio,
   RadioGroup,
+  Select,
   TextField,
+  Typography,
 } from '@mui/material';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -60,30 +63,112 @@ const Home: NextPage = () => {
         </div>
       </header>
 
-      <main className="flex items-center justify-around mx-4 px-8 py-4 rounded-xl bg-purple text-white">
-        <div className="flex flex-col items-center mx-4">
-          <div className="flex">
-            <div className="flex flex-col">
-              <div className="flex pb-4">
-                <FlightTakeoff />
-                <p className="ml-4">Origem</p>
+      <main className="flex flex-col items-center justify-around mx-4 px-8 py-4 rounded-xl bg-purple text-white">
+        <div className="flex flex-row w-full justify-between">
+          <div className="flex flex-col items-center mx-4">
+            <div className="flex">
+              <div className="flex flex-col">
+                <div className="flex pb-4">
+                  <FlightTakeoff />
+                  <Typography variant="body1" className="ml-4">
+                    Origem
+                  </Typography>
+                </div>
+                <TextField
+                  className="bg-white rounded-xl"
+                  id="outlined-basic"
+                  placeholder="Insira a cidade de origem"
+                  variant="outlined"
+                />
               </div>
-              <TextField id="outlined-basic" label="Insira a cidade de origem" variant="outlined" />
+              <CompareArrows className="flex mx-4" />
+              <div className="flex flex-col">
+                <div className="flex pb-4">
+                  <FlightLand />
+                  <Typography variant="body1" className="ml-4">
+                    Destino
+                  </Typography>
+                </div>
+                <TextField
+                  className="bg-white rounded-xl"
+                  id="outlined-basic"
+                  placeholder="Insira a cidade de destino"
+                  variant="outlined"
+                />
+              </div>
             </div>
-            <CompareArrows className="flex mx-4" />
+          </div>
+
+          <div className="flex items-center mx-4">
             <div className="flex flex-col">
               <div className="flex pb-4">
-                <FlightLand />
-                <p className="ml-4">Destino</p>
+                <CalendarMonth />
+                <Typography variant="body1" className="ml-4">
+                  Ida
+                </Typography>
               </div>
               <TextField
+                className="bg-white rounded-xl"
                 id="outlined-basic"
-                label="Insira a cidade de destino"
+                placeholder="Insira a data de ida"
+                variant="outlined"
+              />
+            </div>
+            <div className="flex flex-col">
+              <div className="flex pb-4">
+                <CalendarMonth />
+                <Typography variant="body1" className="ml-4">
+                  Volta
+                </Typography>
+              </div>
+              <TextField
+                className="bg-white rounded-xl"
+                id="outlined-basic"
+                placeholder="Insira a data de volta"
                 variant="outlined"
               />
             </div>
           </div>
 
+          <div className="flex items-center mx-4">
+            <div className="flex flex-col">
+              <div className="flex pb-4">
+                <PeopleAlt />
+                <Typography variant="body1" className="ml-4">
+                  Passageiros
+                </Typography>
+              </div>
+              <TextField
+                select
+                label="Insira os passageiros"
+                className="bg-white rounded-xl"
+                id="outlined-select-seat-class"
+              >
+                <MenuItem value={'Economica'}>1 adulto</MenuItem>
+              </TextField>
+            </div>
+          </div>
+
+          <div className="flex items-center mx-4">
+            <div className="flex flex-col">
+              <div className="flex pb-4">
+                <AirlineSeatReclineNormal />
+                <Typography variant="body1" className="ml-4">
+                  Classe
+                </Typography>
+              </div>
+              <TextField
+                select
+                label="Insira a classe"
+                className="bg-white rounded-xl"
+                id="outlined-select-seat-class"
+              >
+                <MenuItem value={'Economica'}>Economica</MenuItem>
+              </TextField>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-row justify-between w-full">
           <FormControl className="mt-4">
             <RadioGroup
               row
@@ -96,50 +181,15 @@ const Home: NextPage = () => {
               <FormControlLabel value="multidestinos" control={<Radio />} label="Multidestinos" />
             </RadioGroup>
           </FormControl>
-        </div>
 
-        <div className="flex items-center  mx-4">
-          <div className="flex flex-col">
-            <div className="flex pb-4">
-              <CalendarMonth />
-              <p className="ml-4">Ida</p>
-            </div>
-            <TextField id="outlined-basic" label="Insira a data de ida" variant="outlined" />
-          </div>
-          <div className="flex flex-col">
-            <div className="flex pb-4">
-              <CalendarMonth />
-              <p className="ml-4">Volta</p>
-            </div>
-            <TextField id="outlined-basic" label="Insira a data de volta" variant="outlined" />
-          </div>
+          <Button
+            className="flex rounded-xl bg-white text-purple my-4"
+            variant="contained"
+            startIcon={<Search />}
+          >
+            Buscar
+          </Button>
         </div>
-
-        <div className="flex items-center mx-4">
-          <div className="flex flex-col">
-            <div className="flex pb-4">
-              <PeopleAlt />
-              <p className="ml-4">Passageiros</p>
-            </div>
-            <TextField id="outlined-select-seat-class" select label="Insira os passageiros">
-              <MenuItem value={'Economica'}>1 adulto</MenuItem>
-            </TextField>
-          </div>
-        </div>
-
-        <div className="flex items-center mx-4">
-          <div className="flex flex-col">
-            <div className="flex pb-4">
-              <AirlineSeatReclineNormal />
-              <p className="ml-4">Classe</p>
-            </div>
-            <TextField id="outlined-select-seat-class" select label="Insira sua classe">
-              <MenuItem value={'Economica'}>Economica</MenuItem>
-            </TextField>
-          </div>
-        </div>
-
-        <div className="flex"></div>
       </main>
 
       <footer className="flex h-24 w-full items-center justify-center border-t"></footer>
