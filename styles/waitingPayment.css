@@ -1,0 +1,28 @@
+.rect {
+  width: 700px;
+  height: 350px;
+  left: 71px;
+  top: 187px;
+
+  background: #4621AD;
+  border-radius: 31px;
+  }
+  .rect2 {
+  width: 400px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #16043D;
+  border-radius: 23px;
+  }
+  .rect3 {
+  width: 400px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #16043D;
+  border-radius: 23px;
+  }

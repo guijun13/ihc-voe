@@ -1,9 +1,10 @@
-import { Button, Typography } from "@mui/material";
-import Image from "next/image";
-import Latam from "../public/logo-latam-airlines.png";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import { Button, Typography } from '@mui/material';
+import Image from 'next/image';
+import Latam from '../public/logo-latam-airlines.png';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import Link from 'next/link';
 
 export default function TicketCard() {
   return (
@@ -84,12 +85,11 @@ export default function TicketCard() {
         <Typography className="text-black" variant="h6">
           R$ 1.000,00
         </Typography>
-        <Button
-          variant="contained"
-          className="flex rounded-xl bg-purple text-white m-4"
-        >
-          Comprar
-        </Button>
+        <Link href="/checkout">
+          <Button variant="contained" className="flex rounded-xl bg-purple text-white m-4">
+            Comprar
+          </Button>
+        </Link>
       </div>
     </div>
   );

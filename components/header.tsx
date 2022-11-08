@@ -2,14 +2,15 @@ import { LocalActivity, Luggage, LocalFireDepartment } from '@mui/icons-material
 import HomeIcon from '@mui/icons-material/Home';
 import { Button, IconButton } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import Logo from '../public/logo.svg';
 
 export default function Header() {
   return (
-    <header className="flex justify-between w-full px-8 py-6 top-0">
-      <div>
+    <div className="flex justify-between w-full px-8 py-6 top-0">
+      <Link href="/">
         <Image alt="Voe logo" src={Logo} />
-      </div>
+      </Link>
       <div className="flex">
         <Button variant="text" startIcon={<LocalActivity />}>
           Milhas
@@ -30,6 +31,6 @@ export default function Header() {
           <Button variant="text">Entrar</Button>
         </div>
       </div>
-    </header>
+    </div>
   );
 }

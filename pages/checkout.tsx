@@ -1,4 +1,6 @@
+import { Typography } from '@mui/material';
 import { NextPage } from 'next';
+import Link from 'next/link';
 import Footer from '../components/footer';
 import Header from '../components/header';
 
@@ -10,7 +12,9 @@ const Checkout: NextPage = () => {
         <form action="">
           <div className="row">
             <div className="col">
-              <h3 className="title">Dados do Passageiro</h3>
+              <Typography variant="h3" className="title">
+                Dados do Passageiro
+              </Typography>
 
               <div className="inputBox">
                 <input type="text" placeholder="Nome" />
@@ -36,7 +40,9 @@ const Checkout: NextPage = () => {
             </div>
 
             <div className="col">
-              <h3 className="title">Pagamento</h3>
+              <Typography variant="h3" className="title">
+                Pagamento
+              </Typography>
 
               <div className="flex">
                 <div className="inputBox1">
@@ -67,7 +73,9 @@ const Checkout: NextPage = () => {
                   <input type="text" placeholder="CVV" />
                 </div>
               </div>
-              <input type="submit" value="Confirmar Compra" className="submit-btn" />
+              <Link href="/waitingPayment">
+                <input type="submit" value="Confirmar Compra" className="submit-btn" />
+              </Link>
             </div>
           </div>
         </form>

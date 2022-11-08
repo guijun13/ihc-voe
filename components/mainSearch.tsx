@@ -17,6 +17,7 @@ import {
   Radio,
   Button,
 } from '@mui/material';
+import Link from 'next/link';
 
 export default function MainSearch() {
   return (
@@ -138,14 +139,15 @@ export default function MainSearch() {
             <FormControlLabel value="multidestinos" control={<Radio />} label="Multidestinos" />
           </RadioGroup>
         </FormControl>
-
-        <Button
-          className="flex rounded-xl bg-white text-purple my-4"
-          variant="contained"
-          startIcon={<Search />}
-        >
-          Buscar
-        </Button>
+        <Link href="/ticket-list">
+          <Button
+            className="flex rounded-xl bg-white text-purple my-4"
+            variant="contained"
+            startIcon={<Search />}
+          >
+            Buscar
+          </Button>
+        </Link>
       </div>
     </div>
   );
