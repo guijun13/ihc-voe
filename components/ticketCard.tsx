@@ -47,7 +47,7 @@ export default function TicketCard() {
         <div className="m-4 flex flex-row items-center justify-around">
           <div className="m-4">
             <div className="flex flex-col items-center justify-around mx-4 py-1 bg-purple text-white min-h-full-purple rounded-xl ">
-              <Typography>Ida</Typography>
+              <Typography>Volta</Typography>
             </div>
             <Image src={Latam} height={50} alt="Latam logo" />
           </div>
