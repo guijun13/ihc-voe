@@ -1,7 +1,9 @@
 import {
   AirlineSeatReclineNormal,
+  AttachMoney,
   CalendarMonth,
   CompareArrows,
+  CreditCard,
   FlightLand,
   FlightTakeoff,
   LocalActivity,
@@ -9,6 +11,7 @@ import {
   Luggage,
   PeopleAlt,
   Person,
+  Pix,
   Search,
 } from '@mui/icons-material';
 import HomeIcon from '@mui/icons-material/Home';
@@ -28,6 +31,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Logo from '../public/logo.svg';
+import Logo_white from '../public/Logo_white.svg';
 
 const Home: NextPage = () => {
   return (
@@ -63,7 +67,7 @@ const Home: NextPage = () => {
         </div>
       </header>
 
-      <main className="flex flex-col items-center justify-around mx-4 px-8 py-4 rounded-xl bg-purple text-white">
+      <main className="flex flex-col items-center justify-around mx-4 px-8 py-4 rounded-xl bg-purple text-white min-h-full">
         <div className="flex flex-row w-full justify-between">
           <div className="flex flex-col items-center mx-4">
             <div className="flex">
@@ -192,7 +196,53 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t"></footer>
+      <footer className="flex w-full items-center justify-center border-t bg-purple mt-auto">
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row my-8">
+            <Image alt="Voe logo" src={Logo_white} />
+            <div className="mx-4 text-white">
+              <Typography variant="h6">Voe Viagens e Turismo LTDA.</Typography>
+              <Typography variant="body1">
+                CNPJ 26.669.170/0001-57 <br />
+                Rua Guaíra 38 - Queimados <br />
+                CEP 30.130-140, Rio de Janeiro/RJ <br />
+              </Typography>
+            </div>
+          </div>
+          <div className="flex flex-row">
+            <Button className="text-white" variant="text">
+              Quem somos
+            </Button>
+            <Button className="text-white" variant="text">
+              Blog
+            </Button>
+            <Button className="text-white" variant="text">
+              Política de privacidade
+            </Button>
+            <Button className="text-white" variant="text">
+              Termos e condições
+            </Button>
+            <Button className="text-white" variant="text">
+              Carreiras
+            </Button>
+            <Button className="text-white" variant="text">
+              Acessibilidade
+            </Button>
+          </div>
+          <div className="flex flex-col items-center text-white my-4">
+            <Typography variant="h5">Formas de pagamento</Typography>
+            <Typography variant="body1">
+              Pague no cartão de crédito em até 12X com juros, boleto à vista ou parcelado,
+              transferência bancária ou com pix!
+            </Typography>
+            <div className="flex flex-row my-4">
+              <Pix />
+              <CreditCard />
+              <AttachMoney />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
