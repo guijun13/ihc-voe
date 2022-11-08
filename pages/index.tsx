@@ -5,6 +5,9 @@ import Image from 'next/image';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import MainSearch from '../components/mainSearch';
+import China from '../public/china.png';
+import Carousel from '../public/carousel.png';
+import Recife from '../public/recife.png';
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +22,7 @@ const Home: NextPage = () => {
       <main>
         <MainSearch />
         <div className="flex flex-col items-center justify-center mx-8">
-          <Image src="https://picsum.photos/300/200" width={300} height={200} alt="Image" />
+          <Image src={Carousel} width={300} height={200} alt="Image" />
           <div className="flex flex-col">
             <div className="flex flex-col">
               <Typography variant="h5" className="my-4 text-purple">
@@ -27,7 +30,7 @@ const Home: NextPage = () => {
               </Typography>
               <div className="flex flex-row justify-around">
                 <div className="flex flex-col border border-black border-solid rounded-xl items-center justify-around m-4 p-4">
-                  <Image src="https://picsum.photos/500/200" width={500} height={200} alt="Image" />
+                  <Image src={China} width={500} height={200} alt="Image" />
                   <div className="flex flex-row items-center justify-around w-full">
                     <Typography variant="body1">Pacotes a partir de 10x de R$229</Typography>
                     <Button
@@ -39,7 +42,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className="flex flex-col border border-black border-solid rounded-xl items-center justify-around m-4 p-4">
-                  <Image src="https://picsum.photos/500/200" width={500} height={200} alt="Image" />
+                  <Image src={Recife} width={500} height={200} alt="Image" />
                   <div className="flex flex-row items-center justify-around w-full">
                     <Typography variant="body1">Pacotes a partir de 10x de R$229</Typography>
                     <Button
