@@ -7,7 +7,7 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 
 export default function TicketCard() {
   return (
-    <div className="m-4 p-4 flex flex-row items-center justify-around mx-4 px-8 py-4 rounded-xl bg-gray-light text-white min-h-full">
+    <div className="m-4 flex flex-row items-center justify-between mx-4 px-8 py-4 rounded-xl bg-gray-light text-white min-h-full">
       <div>
         <div className="m-4 flex flex-row items-center justify-around">
           <div className="m-4">
