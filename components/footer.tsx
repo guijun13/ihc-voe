@@ -1,7 +1,7 @@
 import { Pix, CreditCard, AttachMoney } from '@mui/icons-material';
 import { Typography, Button } from '@mui/material';
 import Image from 'next/image';
-import Logo_white from '../public/logo.svg';
+import Logo_white from '../public/logoWhite.svg';
 
 export default function Footer() {
   return (
