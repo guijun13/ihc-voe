@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <main>
         <MainSearch />
         <div className="flex flex-col items-center justify-center mx-8">
-          <Image src={Carousel} width={300} height={200} alt="Image" />
+          <Image className="my-8" src={Carousel} width={1300} height={500} alt="Image" />
           <div className="flex flex-col">
             <div className="flex flex-col">
               <Typography variant="h5" className="my-4 text-purple">

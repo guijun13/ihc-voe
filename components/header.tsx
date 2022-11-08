@@ -12,23 +12,29 @@ export default function Header() {
         <Image alt="Voe logo" src={Logo} />
       </Link>
       <div className="flex">
-        <Button variant="text" startIcon={<LocalActivity />}>
+        <Button className="text-black" variant="text" startIcon={<LocalActivity />}>
           Milhas
         </Button>
-        <Button variant="text" startIcon={<Luggage />}>
+        <Button className="text-black" variant="text" startIcon={<Luggage />}>
           Pacotes
         </Button>
-        <Button variant="text" startIcon={<LocalFireDepartment />}>
+        <Button className="text-black" variant="text" startIcon={<LocalFireDepartment />}>
           Ofertas
         </Button>
       </div>
-      <div className="flex">
-        <IconButton aria-label="Home">
-          <HomeIcon />
-        </IconButton>
+      <div className="flex items-center">
+        <Link href="/">
+          <IconButton aria-label="Home">
+            <HomeIcon />
+          </IconButton>
+        </Link>
         <div className="flex">
-          <Button variant="text">Registrar</Button>
-          <Button variant="text">Entrar</Button>
+          <Button className="text-black" variant="text">
+            Registrar
+          </Button>
+          <Button className="text-black" variant="text">
+            Entrar
+          </Button>
         </div>
       </div>
     </div>
