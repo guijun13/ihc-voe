@@ -1,4 +1,6 @@
+import { Button, Typography } from '@mui/material';
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import Footer from '../components/footer';
 import Header from '../components/header';
 
@@ -6,24 +8,32 @@ const WaitingPayment: NextPage = () => {
   return (
     <>
       <Header />
-      <div>
-        <div className="rect">
-          <h1 className="bg-white">Pagamento em análise!</h1>
-          <h2 className="bg-white">
+      <div className="flex flex-col justify-center items-center bg-purple border rounded-xl m-8 p-4">
+        <div className="flex flex-col items-center">
+          <Typography variant="h4" className="text-white my-4">
+            Pagamento em análise!
+          </Typography>
+          <Typography variant="h5" className="text-white">
             Você receberá uma confirmação no seu e-mail cadastrado.
             <br />
             Aproveite sua viagem!
-          </h2>
+          </Typography>
         </div>
-      </div>
-      <div>
-        <div className="rect2">
-          <h2 className="bg-white">Minhas passagens</h2>
+        <div>
+          <Button className="flex justify-center items-center border rounded-xl bg-gray-dark m-4 p-4">
+            <Typography variant="button" className="text-white">
+              Minhas passagens
+            </Typography>
+          </Button>
         </div>
-      </div>
-      <div>
-        <div className="rect3">
-          <h2 className="bg-white">Home</h2>
+        <div>
+          <Link href="/">
+            <Button className="flex justify-center items-center border rounded-xl bg-gray-dark m-4 p-4">
+              <Typography variant="button" className="text-white">
+                Home
+              </Typography>
+            </Button>
+          </Link>
         </div>
       </div>
 
