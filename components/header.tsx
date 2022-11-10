@@ -29,12 +29,16 @@ export default function Header() {
           </IconButton>
         </Link>
         <div className="flex">
-          <Button className="text-black" variant="text">
-            Registrar
-          </Button>
-          <Button className="text-black" variant="text">
-            Entrar
-          </Button>
+          <Link href="/login">
+            <Button className="text-black" variant="text">
+              Registrar
+            </Button>
+          </Link>
+          <Link href="/login">
+            <Button className="text-black" variant="text">
+              Entrar
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
