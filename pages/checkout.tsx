@@ -16,7 +16,7 @@ const Checkout: NextPage = () => {
                 Dados do Passageiro
               </Typography>
 
-              <div className="inputBox">
+              <div className="flex mb-4 mx-4">
                 <TextField
                   variant="outlined"
                   id="outlined-basic"
@@ -24,23 +24,25 @@ const Checkout: NextPage = () => {
                   className="bg-white rounded-xl w-full"
                 />
               </div>
-              <div className="inputBox">
+              <div className="flex mb-4 mx-4">
                 <TextField
+                  type="number"
                   variant="outlined"
                   id="outlined-basic"
                   placeholder="CPF"
                   className="bg-white rounded-xl w-full"
                 />
               </div>
-              <div className="inputBox">
+              <div className="flex mb-4 mx-4">
                 <TextField
+                  type="email"
                   variant="outlined"
                   id="outlined-basic"
                   placeholder="Email"
                   className="bg-white rounded-xl w-full"
                 />
               </div>
-              <div className="inputBox">
+              <div className="flex mb-4 mx-4">
                 <TextField
                   variant="outlined"
                   id="outlined-basic"
@@ -50,7 +52,7 @@ const Checkout: NextPage = () => {
               </div>
 
               <div className="flex">
-                <div className="inputBox">
+                <div className="flex mb-4 mx-4">
                   <TextField
                     variant="outlined"
                     id="outlined-basic"
@@ -58,7 +60,7 @@ const Checkout: NextPage = () => {
                     className="bg-white rounded-xl w-full"
                   />
                 </div>
-                <div className="inputBox">
+                <div className="flex mb-4 mx-4">
                   <TextField
                     variant="outlined"
                     id="outlined-basic"
@@ -74,8 +76,8 @@ const Checkout: NextPage = () => {
                 Pagamento
               </Typography>
 
-              <div className="flex">
-                <div className="inputBox1">
+              <div className="flex justify-around">
+                <div className="flex mx-4">
                   <Button
                     size="large"
                     variant="contained"
@@ -84,7 +86,7 @@ const Checkout: NextPage = () => {
                     Pix
                   </Button>
                 </div>
-                <div className="inputBox1">
+                <div className="flex mx-4">
                   <Button
                     size="large"
                     variant="contained"
@@ -93,7 +95,7 @@ const Checkout: NextPage = () => {
                     Cartão de crédito
                   </Button>
                 </div>
-                <div className="inputBox1">
+                <div className="flex mx-4">
                   <Button
                     size="large"
                     variant="contained"
@@ -103,7 +105,7 @@ const Checkout: NextPage = () => {
                   </Button>
                 </div>
               </div>
-              <div className="inputBox">
+              <div className="flex mb-4 mx-4">
                 <TextField
                   variant="outlined"
                   id="outlined-basic"
@@ -111,16 +113,19 @@ const Checkout: NextPage = () => {
                   className="bg-white rounded-xl w-full"
                 />
               </div>
-              <div className="inputBox">
+              <div className="flex mb-4 mx-4">
                 <TextField
+                  type="number"
                   variant="outlined"
                   id="outlined-basic"
                   placeholder="Número do cartão"
                   className="bg-white rounded-xl w-full"
                 />
               </div>
-              <div className="inputBox">
+              <div className="flex flex-col mb-4 mx-4">
+                <Typography variant="body1">Data de validade</Typography>
                 <TextField
+                  type="month"
                   variant="outlined"
                   id="outlined-basic"
                   placeholder="Data de validade"
@@ -129,32 +134,28 @@ const Checkout: NextPage = () => {
               </div>
 
               <div className="flex">
-                <div className="inputBox">
+                <div className="flex mb-4 mx-4">
                   <TextField
-                    variant="outlined"
-                    id="outlined-basic"
-                    placeholder="Ano"
-                    className="bg-white rounded-xl w-full"
-                  />
-                </div>
-                <div className="inputBox">
-                  <TextField
+                    type="number"
                     variant="outlined"
                     id="outlined-basic"
                     placeholder="CVV"
+                    helperText="Número de 3 dígitos na parte de trás do seu cartão"
                     className="bg-white rounded-xl w-full"
                   />
                 </div>
               </div>
-              <Link href="/waitingPayment">
-                <Button
-                  size="large"
-                  variant="contained"
-                  className="flex rounded-xl bg-purple text-white my-4 hover:bg-purple"
-                >
-                  Confirmar compra
-                </Button>
-              </Link>
+              <div className="flex justify-center">
+                <Link href="/waitingPayment">
+                  <Button
+                    size="large"
+                    variant="contained"
+                    className="flex rounded-xl bg-purple text-white my-4 hover:bg-purple"
+                  >
+                    Confirmar compra
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </form>
