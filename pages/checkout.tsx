@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Button, TextField, Typography } from '@mui/material';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import Footer from '../components/footer';
@@ -17,24 +17,54 @@ const Checkout: NextPage = () => {
               </Typography>
 
               <div className="inputBox">
-                <input type="text" placeholder="Nome" />
+                <TextField
+                  variant="outlined"
+                  id="outlined-basic"
+                  placeholder="Nome"
+                  className="bg-white rounded-xl w-full"
+                />
               </div>
               <div className="inputBox">
-                <input type="text" placeholder="CPF" />
+                <TextField
+                  variant="outlined"
+                  id="outlined-basic"
+                  placeholder="CPF"
+                  className="bg-white rounded-xl w-full"
+                />
               </div>
               <div className="inputBox">
-                <input type="email" placeholder="seuemail@exemplo.com" />
+                <TextField
+                  variant="outlined"
+                  id="outlined-basic"
+                  placeholder="Email"
+                  className="bg-white rounded-xl w-full"
+                />
               </div>
               <div className="inputBox">
-                <input type="text" placeholder="Endereço de cobrança" />
+                <TextField
+                  variant="outlined"
+                  id="outlined-basic"
+                  placeholder="Endereço de cobrança"
+                  className="bg-white rounded-xl w-full"
+                />
               </div>
 
               <div className="flex">
                 <div className="inputBox">
-                  <input type="text" placeholder="Cidade" />
+                  <TextField
+                    variant="outlined"
+                    id="outlined-basic"
+                    placeholder="Cidade"
+                    className="bg-white rounded-xl w-full"
+                  />
                 </div>
                 <div className="inputBox">
-                  <input type="text" placeholder="Estado" />
+                  <TextField
+                    variant="outlined"
+                    id="outlined-basic"
+                    placeholder="Estado"
+                    className="bg-white rounded-xl w-full"
+                  />
                 </div>
               </div>
             </div>
@@ -46,35 +76,84 @@ const Checkout: NextPage = () => {
 
               <div className="flex">
                 <div className="inputBox1">
-                  <input type="submit" value="Pix" className="submit-btn" />
+                  <Button
+                    size="large"
+                    variant="contained"
+                    className="flex rounded-xl bg-purple text-white my-4 hover:bg-purple"
+                  >
+                    Pix
+                  </Button>
                 </div>
                 <div className="inputBox1">
-                  <input type="submit" value="Cartão de Crédito" className="submit-btn" />
+                  <Button
+                    size="large"
+                    variant="contained"
+                    className="flex rounded-xl bg-purple text-white my-4 hover:bg-purple"
+                  >
+                    Cartão de crédito
+                  </Button>
                 </div>
                 <div className="inputBox1">
-                  <input type="submit" value="Boleto" className="submit-btn" />
+                  <Button
+                    size="large"
+                    variant="contained"
+                    className="flex rounded-xl bg-purple text-white my-4 hover:bg-purple"
+                  >
+                    Boleto
+                  </Button>
                 </div>
               </div>
               <div className="inputBox">
-                <input type="text" placeholder="Nome no Cartão" />
+                <TextField
+                  variant="outlined"
+                  id="outlined-basic"
+                  placeholder="Nome do Cartão"
+                  className="bg-white rounded-xl w-full"
+                />
               </div>
               <div className="inputBox">
-                <input type="number" placeholder="Número do cartão" />
+                <TextField
+                  variant="outlined"
+                  id="outlined-basic"
+                  placeholder="Número do cartão"
+                  className="bg-white rounded-xl w-full"
+                />
               </div>
               <div className="inputBox">
-                <input type="text" placeholder="Data de Validade" />
+                <TextField
+                  variant="outlined"
+                  id="outlined-basic"
+                  placeholder="Data de validade"
+                  className="bg-white rounded-xl w-full"
+                />
               </div>
 
               <div className="flex">
                 <div className="inputBox">
-                  <input type="text" placeholder="Ano" />
+                  <TextField
+                    variant="outlined"
+                    id="outlined-basic"
+                    placeholder="Ano"
+                    className="bg-white rounded-xl w-full"
+                  />
                 </div>
                 <div className="inputBox">
-                  <input type="text" placeholder="CVV" />
+                  <TextField
+                    variant="outlined"
+                    id="outlined-basic"
+                    placeholder="CVV"
+                    className="bg-white rounded-xl w-full"
+                  />
                 </div>
               </div>
               <Link href="/waitingPayment">
-                <input type="submit" value="Confirmar Compra" className="submit-btn" />
+                <Button
+                  size="large"
+                  variant="contained"
+                  className="flex rounded-xl bg-purple text-white my-4 hover:bg-purple"
+                >
+                  Confirmar compra
+                </Button>
               </Link>
             </div>
           </div>
