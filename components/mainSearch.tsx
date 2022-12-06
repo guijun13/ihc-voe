@@ -58,7 +58,7 @@ export default function MainSearch() {
         </div>
 
         <div className="flex items-center mx-4">
-          <div className="flex flex-col">
+          <div className="flex flex-col mr-4">
             <div className="flex pb-4">
               <CalendarMonth />
               <Typography variant="body1" className="ml-4">
