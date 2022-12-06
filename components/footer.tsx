@@ -19,22 +19,22 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-row">
-          <Button className="text-white" variant="text">
+          <Button className="text-white" color="primary" variant="text">
             Quem somos
           </Button>
-          <Button className="text-white" variant="text">
+          <Button className="text-white" color="primary" variant="text">
             Blog
           </Button>
-          <Button className="text-white" variant="text">
+          <Button className="text-white" color="primary" variant="text">
             Política de privacidade
           </Button>
-          <Button className="text-white" variant="text">
+          <Button className="text-white" color="primary" variant="text">
             Termos e condições
           </Button>
-          <Button className="text-white" variant="text">
+          <Button className="text-white" color="primary" variant="text">
             Carreiras
           </Button>
-          <Button className="text-white" variant="text">
+          <Button className="text-white" color="primary" variant="text">
             Acessibilidade
           </Button>
         </div>
