@@ -26,6 +26,7 @@ const Login: NextPage = () => {
                 placeholder="E-mail"
                 variant="outlined"
                 required
+                type="email"
               />
               <TextField
                 className="bg-white rounded-xl mt-4"
@@ -66,9 +67,17 @@ const Login: NextPage = () => {
             <TextField
               className="bg-white rounded-xl pt-4"
               id="outlined-basic"
+              placeholder="Nome completo"
+              variant="outlined"
+              required
+            />
+            <TextField
+              className="bg-white rounded-xl pt-4"
+              id="outlined-basic"
               placeholder="E-mail"
               variant="outlined"
               required
+              type="email"
             />
             <TextField
               className="bg-white rounded-xl pt-4"
@@ -89,16 +98,18 @@ const Login: NextPage = () => {
             <TextField
               className="bg-white rounded-xl pt-4"
               id="outlined-basic"
-              placeholder="Nome completo"
+              placeholder="CPF"
               variant="outlined"
               required
+              type="number"
             />
             <TextField
               className="bg-white rounded-xl pt-4"
               id="outlined-basic"
-              placeholder="CPF"
+              placeholder="CEP"
               variant="outlined"
               required
+              type="number"
             />
             <TextField
               className="bg-white rounded-xl pt-4"
@@ -106,6 +117,14 @@ const Login: NextPage = () => {
               placeholder="Endereço"
               variant="outlined"
               required
+            />
+            <TextField
+              className="bg-white rounded-xl pt-4"
+              id="outlined-basic"
+              placeholder="Número residência"
+              variant="outlined"
+              required
+              type="number"
             />
           </div>
           <Button
