@@ -56,7 +56,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-row bg-purple my-8 p-4 items-center justify-center w-full border rounded-xl">
+          <div className="flex flex-col md:flex-row bg-purple my-8 p-4 items-center justify-center w-full border rounded-xl">
             <Typography variant="h6" className="text-white px-4">
               Cadastre-se agora e recebe ofertas e muito mais!
             </Typography>
