@@ -102,7 +102,11 @@ export default function MainSearch() {
               className="bg-white rounded-xl"
               id="outlined-select-seat-class"
             >
-              <MenuItem value={'Economica'}>1 adulto</MenuItem>
+              <MenuItem value={'1 adulto'}>1 adulto</MenuItem>
+              <MenuItem value={'2 adultos'}>2 adultos</MenuItem>
+              <MenuItem value={'3 adultos'}>3 adultos</MenuItem>
+              <MenuItem value={'4 adultos'}>4 adultos</MenuItem>
+              <MenuItem value={'5 adultos'}>5 adultos</MenuItem>
             </TextField>
           </div>
         </div>
@@ -122,6 +126,9 @@ export default function MainSearch() {
               id="outlined-select-seat-class"
             >
               <MenuItem value={'Economica'}>Economica</MenuItem>
+              <MenuItem value={'Economica Plus'}>Economica Plus</MenuItem>
+              <MenuItem value={'Executiva Light'}>Executiva Light</MenuItem>
+              <MenuItem value={'Primeira Classe'}>Primeira Classe</MenuItem>
             </TextField>
           </div>
         </div>
