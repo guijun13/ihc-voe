@@ -56,12 +56,15 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex bg-purple my-8 p-4 items-center justify-center w-full border rounded-xl">
-            <Typography variant="h6" className="text-white px-4">
+          <div className="flex flex-col lg:flex-row bg-purple my-8 p-4 items-center justify-center w-full border rounded-xl">
+            <Typography variant="h6" className="text-white py-4 lg:px-4">
               Cadastre-se agora e recebe ofertas e muito mais!
             </Typography>
-            <TextField label="Insira seu email" className="bg-white rounded-xl w-full" />
-            <Button variant="contained" className="flex rounded-xl bg-white text-purple my-4 mx-4">
+            <TextField label="Insira seu email" className="bg-white rounded-xl w-1/2" />
+            <Button
+              variant="contained"
+              className="flex rounded-xl bg-white text-purple my-4 mx-4 lg:px-4"
+            >
               Cadastrar
             </Button>
           </div>
