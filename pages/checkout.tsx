@@ -124,7 +124,7 @@ const Checkout: NextPage = () => {
                   className="bg-white rounded-xl w-full"
                 />
               </div>
-              <div className="flex flex-col lg:flex-row flex-col mb-4 mx-4">
+              <div className="flex lg:flex-row flex-col mb-4 mx-4">
                 <Typography variant="body1">Data de validade</Typography>
                 <TextField
                   type="month"
