@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { Facebook, Google } from '@mui/icons-material';
 import {
   Button,
@@ -112,17 +112,13 @@ const Login: NextPage = () => {
               value={CPF}
               onChange={(e) => setCPF(e.target.value)}
             >
-              {() => (
-                <TextField
-                  className="bg-white rounded-xl mt-4"
-                  id="outlined-basic"
-                  label="CPF"
-                  // placeholder="xxx.xxx.xxx-xx"
-                  variant="outlined"
-                  required
-                  // type="text"
-                />
-              )}
+              <TextField
+                className="bg-white rounded-xl mt-4"
+                id="outlined-basic"
+                label="CPF"
+                variant="outlined"
+                required
+              />
             </InputMask>
 
             <InputMask
@@ -131,15 +127,13 @@ const Login: NextPage = () => {
               value={CEP}
               onChange={(e) => setCEP(e.target.value)}
             >
-              {() => (
-                <TextField
-                  className="bg-white rounded-xl mt-4"
-                  id="outlined-basic"
-                  label="CEP"
-                  variant="outlined"
-                  required
-                />
-              )}
+              <TextField
+                className="bg-white rounded-xl mt-4"
+                id="outlined-basic"
+                label="CEP"
+                variant="outlined"
+                required
+              />
             </InputMask>
             <TextField
               className="bg-white rounded-xl mt-4"
