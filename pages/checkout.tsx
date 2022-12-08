@@ -1,14 +1,16 @@
-import { Button, TextField, Typography } from '@mui/material';
-import { NextPage } from 'next';
-import Link from 'next/link';
-import Footer from '../components/footer';
-import Header from '../components/header';
+import { Button, TextField, Typography } from "@mui/material";
+import { NextPage } from "next";
+import Link from "next/link";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import ResumeCard from "../components/resumeCard";
 
 const Checkout: NextPage = () => {
   return (
     <>
       <Header />
-      <div className="container">
+      <ResumeCard/>
+      <div className="container m-auto">
         <form action="">
           <div className="row">
             <div className="col">
