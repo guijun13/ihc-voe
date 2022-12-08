@@ -18,7 +18,7 @@ export default function Footer() {
             </Typography>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row flex-row">
+        <div className="flex flex-col lg:flex-row flex-row">
           <Button className="text-white" color="primary" variant="text">
             Quem somos
           </Button>

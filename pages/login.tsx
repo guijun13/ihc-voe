@@ -15,7 +15,7 @@ const Login: NextPage = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col md:flex-row justify-center m-8 p-4">
+      <div className="flex flex-col lg:flex-row justify-center m-8 p-4">
         <form method="post" className="pr-4 border-r border-solid border-black">
           <Typography variant="h4">Entrar</Typography>
           <div className="grid grid-cols-2 gap-4">

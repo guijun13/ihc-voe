@@ -28,10 +28,10 @@ const Home: NextPage = () => {
               <Typography variant="h5" className="my-4 text-purple">
                 Destinos em alta
               </Typography>
-              <div className="flex flex-col md:flex-row justify-around">
+              <div className="flex flex-col lg:flex-row justify-around">
                 <div className="flex flex-col border border-black border-solid rounded-xl items-center justify-around m-4 p-4">
                   <Image src={China} width={500} height={200} alt="Imagem viagem" />
-                  <div className="flex flex-col md:flex-row items-center justify-around w-full">
+                  <div className="flex flex-col lg:flex-row items-center justify-around w-full">
                     <Typography variant="body1">Pacotes a partir de 10x de R$229</Typography>
                     <Button
                       variant="contained"
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="flex flex-col border border-black border-solid rounded-xl items-center justify-around m-4 p-4">
                   <Image src={Recife} width={500} height={200} alt="Imagem viagem" />
-                  <div className="flex flex-col md:flex-row items-center justify-around w-full">
+                  <div className="flex flex-col lg:flex-row items-center justify-around w-full">
                     <Typography variant="body1">Pacotes a partir de 10x de R$229</Typography>
                     <Button
                       variant="contained"
