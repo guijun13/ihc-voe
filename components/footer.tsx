@@ -5,7 +5,7 @@ import Logo_white from '../public/logo.svg';
 
 export default function Footer() {
   return (
-    <footer className="flex w-full items-center justify-center border-t bg-purple mt-auto">
+    <footer className="flex flex-col md:flex-row w-full items-center justify-center border-t bg-purple mt-auto">
       <div className="flex flex-col items-center">
         <div className="flex flex-row my-8">
           <Image alt="Voe logo" src={Logo_white} />
@@ -18,7 +18,7 @@ export default function Footer() {
             </Typography>
           </div>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row flex-row">
           <Button className="text-white" color="primary" variant="text">
             Quem somos
           </Button>
@@ -38,7 +38,7 @@ export default function Footer() {
             Acessibilidade
           </Button>
         </div>
-        <div className="flex flex-col items-center text-white my-4">
+        <div className="flex flex-col md:flex-row items-center text-white my-4">
           <Typography variant="h5">Formas de pagamento</Typography>
           <Typography variant="body1">
             Pague no cartão de crédito em até 12X com juros, boleto à vista ou parcelado,

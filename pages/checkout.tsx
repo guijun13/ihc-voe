@@ -53,8 +53,8 @@ const Checkout: NextPage = () => {
                 />
               </div>
 
-              <div className="flex">
-                <div className="flex mb-4 mx-4">
+              <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row mb-4 mx-4">
                   <TextField
                     variant="outlined"
                     id="outlined-basic"
@@ -78,8 +78,8 @@ const Checkout: NextPage = () => {
                 Pagamento
               </Typography>
 
-              <div className="flex justify-around">
-                <div className="flex mx-4">
+              <div className="flex flex-col md:flex-row justify-around">
+                <div className="flex flex-col md:flex-row mx-4">
                   <Button
                     size="large"
                     variant="contained"
@@ -88,26 +88,26 @@ const Checkout: NextPage = () => {
                     Pix
                   </Button>
                 </div>
-                <div className="flex mx-4">
+                <div className="flex flex-col md:flex-row mx-4">
                   <Button
                     size="large"
                     variant="contained"
-                    className="flex rounded-xl bg-purple text-white my-4 hover:bg-purple"
+                    className="flex flex-col md:flex-row rounded-xl bg-purple text-white my-4 hover:bg-purple"
                   >
                     Cartão de crédito
                   </Button>
                 </div>
-                <div className="flex mx-4">
+                <div className="flex flex-col md:flex-row mx-4">
                   <Button
                     size="large"
                     variant="contained"
-                    className="flex rounded-xl bg-purple text-white my-4 hover:bg-purple"
+                    className="flex flex-col md:flex-row rounded-xl bg-purple text-white my-4 hover:bg-purple"
                   >
                     Boleto
                   </Button>
                 </div>
               </div>
-              <div className="flex mb-4 mx-4">
+              <div className="flex flex-col md:flex-row mb-4 mx-4">
                 <TextField
                   variant="outlined"
                   id="outlined-basic"
@@ -115,7 +115,7 @@ const Checkout: NextPage = () => {
                   className="bg-white rounded-xl w-full"
                 />
               </div>
-              <div className="flex mb-4 mx-4">
+              <div className="flex flex-col md:flex-row mb-4 mx-4">
                 <TextField
                   type="number"
                   variant="outlined"
@@ -124,7 +124,7 @@ const Checkout: NextPage = () => {
                   className="bg-white rounded-xl w-full"
                 />
               </div>
-              <div className="flex flex-col mb-4 mx-4">
+              <div className="flex flex-col md:flex-row flex-col mb-4 mx-4">
                 <Typography variant="body1">Data de validade</Typography>
                 <TextField
                   type="month"
@@ -135,8 +135,8 @@ const Checkout: NextPage = () => {
                 />
               </div>
 
-              <div className="flex">
-                <div className="flex mb-4 mx-4">
+              <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row mb-4 mx-4">
                   <TextField
                     type="number"
                     variant="outlined"
@@ -147,7 +147,7 @@ const Checkout: NextPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex justify-center">
+              <div className="flex flex-col md:flex-row justify-center">
                 <Link href="/waitingPayment">
                   <Button
                     size="large"
