@@ -21,10 +21,10 @@ const Home: NextPage = () => {
 
       <main>
         <MainSearch />
-        <div className="flex flex-col md:flex-row items-center justify-center mx-8">
+        <div className="flex flex-col items-center justify-center mx-8">
           <Image className="my-8" src={Carousel} width={1300} height={500} alt="Imagem paisagem" />
           <div className="flex flex-col">
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center">
               <Typography variant="h5" className="my-4 text-purple">
                 Destinos em alta
               </Typography>
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row bg-purple my-8 p-4 items-center justify-center w-full border rounded-xl">
+          <div className="flex bg-purple my-8 p-4 items-center justify-center w-full border rounded-xl">
             <Typography variant="h6" className="text-white px-4">
               Cadastre-se agora e recebe ofertas e muito mais!
             </Typography>
