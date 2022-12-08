@@ -78,10 +78,11 @@ export default function MainSearch() {
               </Typography>
             </div>
             <TextField
+              type="date"
               className="bg-white rounded-xl"
               id="outlined-basic"
-              placeholder="Insira a data de ida"
               variant="outlined"
+              placeholder="DD-MM-AAAA"
             />
           </div>
           <div className="flex flex-col">
@@ -92,10 +93,11 @@ export default function MainSearch() {
               </Typography>
             </div>
             <TextField
+              type="date"
               className="bg-white rounded-xl"
               id="outlined-basic"
-              placeholder="Insira a data de volta"
               variant="outlined"
+              placeholder="DD-MM-AAAA"
             />
           </div>
         </div>
