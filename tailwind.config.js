@@ -5,7 +5,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-
   theme: {
     screens: {
       sm: '480px',
