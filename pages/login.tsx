@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Facebook, Google } from '@mui/icons-material';
 import {
   Button,
@@ -10,12 +11,16 @@ import {
 import type { NextPage } from 'next';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import InputMask from 'react-input-mask';
 
 const Login: NextPage = () => {
+  const [CEP, setCEP] = useState('');
+  const [CPF, setCPF] = useState('');
+
   return (
     <>
       <Header />
-      <div className="flex flex-col lg:flex-row justify-center m-8 p-4">
+      <div className="flex flex-row justify-center m-8 p-4">
         <form method="post" className="pr-4 border-r border-solid border-black">
           <Typography variant="h4">Entrar</Typography>
           <div className="grid grid-cols-2 gap-4">
@@ -23,7 +28,8 @@ const Login: NextPage = () => {
               <TextField
                 className="bg-white rounded-xl mt-4"
                 id="outlined-basic"
-                placeholder="E-mail"
+                label="E-mail"
+                placeholder="exemplo@email.com"
                 variant="outlined"
                 required
                 type="email"
@@ -31,6 +37,7 @@ const Login: NextPage = () => {
               <TextField
                 className="bg-white rounded-xl mt-4"
                 id="outlined-basic"
+                label="Senha"
                 placeholder="Senha"
                 variant="outlined"
                 type="password"
@@ -65,63 +72,88 @@ const Login: NextPage = () => {
           <Typography variant="h4">Crie sua conta</Typography>
           <div className="grid grid-cols-2 gap-4">
             <TextField
-              className="bg-white rounded-xl pt-4"
+              className="bg-white rounded-xl mt-4"
               id="outlined-basic"
+              label="Nome completo"
               placeholder="Nome completo"
               variant="outlined"
               required
             />
             <TextField
-              className="bg-white rounded-xl pt-4"
+              className="bg-white rounded-xl mt-4"
               id="outlined-basic"
-              placeholder="E-mail"
+              label="E-mail"
+              placeholder="exemplo@email.com"
               variant="outlined"
               required
               type="email"
             />
             <TextField
-              className="bg-white rounded-xl pt-4"
+              className="bg-white rounded-xl mt-4"
               id="outlined-basic"
+              label="Senha"
               placeholder="Senha"
               variant="outlined"
               type="password"
               required
             />
             <TextField
-              className="bg-white rounded-xl pt-4"
+              className="bg-white rounded-xl mt-4"
               id="outlined-basic"
+              label="Confirmar senha"
               placeholder="Confirmar senha"
               variant="outlined"
               type="password"
               required
             />
+            <InputMask
+              mask="999.999.999-99"
+              placeholder="Digite o seu CPF"
+              value={CPF}
+              onChange={(e) => setCPF(e.target.value)}
+            >
+              {() => (
+                <TextField
+                  className="bg-white rounded-xl mt-4"
+                  id="outlined-basic"
+                  label="CPF"
+                  // placeholder="xxx.xxx.xxx-xx"
+                  variant="outlined"
+                  required
+                  // type="text"
+                />
+              )}
+            </InputMask>
+
+            <InputMask
+              mask="99 999-999"
+              placeholder="Digite o seu CEP"
+              value={CEP}
+              onChange={(e) => setCEP(e.target.value)}
+            >
+              {() => (
+                <TextField
+                  className="bg-white rounded-xl mt-4"
+                  id="outlined-basic"
+                  label="CEP"
+                  variant="outlined"
+                  required
+                />
+              )}
+            </InputMask>
             <TextField
-              className="bg-white rounded-xl pt-4"
+              className="bg-white rounded-xl mt-4"
               id="outlined-basic"
-              placeholder="CPF"
+              label="Endereço"
+              placeholder="Digite o nome da rua"
               variant="outlined"
               required
-              type="number"
             />
             <TextField
-              className="bg-white rounded-xl pt-4"
+              className="bg-white rounded-xl mt-4"
               id="outlined-basic"
-              placeholder="CEP"
-              variant="outlined"
-              required
-              type="number"
-            />
-            <TextField
-              className="bg-white rounded-xl pt-4"
-              id="outlined-basic"
-              placeholder="Endereço"
-              variant="outlined"
-              required
-            />
-            <TextField
-              className="bg-white rounded-xl pt-4"
-              id="outlined-basic"
-              placeholder="Número residência"
+              label="Número residência"
+              placeholder="Digite o número da residência"
               variant="outlined"
               required
               type="number"
