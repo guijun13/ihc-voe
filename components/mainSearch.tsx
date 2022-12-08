@@ -22,33 +22,33 @@ import Link from 'next/link';
 export default function MainSearch() {
   return (
     <div className="flex flex-col items-center justify-around mx-4 px-8 py-4 rounded-xl bg-purple text-white min-h-full">
-      <div className="flex flex-col md:flex-row flex flex-row w-full justify-between">
-        <div className="flex flex-col md:flex-row items-center mx-4">
-          <div className="flex flex-col md:flex-row">
+      <div className="flex lg:flex-row sm:flex-col w-full justify-between">
+        <div className="flex flex-col items-center mx-4">
+          <div className="flex lg:flex-row sm:flex-col">
             <div className="flex flex-col">
-              <div className="flex flex-col md:flex-row items-center pb-4">
-                <FlightTakeoff className="flex flex-col md:flex-row items-center"/>
-                <Typography variant="body1" className="ml-center">
+              <div className="flex pb-4">
+                <FlightTakeoff />
+                <Typography variant="body1" className="ml-4">
                   Origem
                 </Typography>
               </div>
               <TextField
-                className="bg-white rounded-xl ml-auto"
+                className="bg-white rounded-xl"
                 id="outlined-basic"
                 placeholder="Insira a cidade de origem"
                 variant="outlined"
               />
             </div>
-            <CompareArrows className="mx-auto" />
+            <CompareArrows className="flex mx-4" />
             <div className="flex flex-col">
-              <div className="flex flex-col md:flex-row items-center pb-4">
-                <FlightLand className="flex flex-col md:flex-row items-center"/>
-                <Typography variant="body1" className="ml-center">
+              <div className="flex pb-4">
+                <FlightLand />
+                <Typography variant="body1" className="ml-4">
                   Destino
                 </Typography>
               </div>
               <TextField
-                className="bg-white rounded-xl ml-auto"
+                className="bg-white rounded-xl"
                 id="outlined-basic"
                 placeholder="Insira a cidade de destino"
                 variant="outlined"
@@ -57,30 +57,30 @@ export default function MainSearch() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center mx-4">
-          <div className="flex flex-col md:flex-row mr-4">
-            <div className="flex flex-col md:flex-row items-center pb -4">
-              <CalendarMonth className="flex flex-col md:flex-row items-center ml-4"/>
+        <div className="flex lg:flex-row sm:flex-col items-center mx-4">
+          <div className="flex flex-col lg:mr-4">
+            <div className="flex pb-4">
+              <CalendarMonth />
               <Typography variant="body1" className="ml-4">
                 Ida
               </Typography>
             </div>
             <TextField
-              className="bg-white rounded-xl ml-4 "
+              className="bg-white rounded-xl"
               id="outlined-basic"
               placeholder="Insira a data de ida"
               variant="outlined"
             />
           </div>
-          <div className="flex flex-col md:flex-row ">
-            <div className="flex flex-col md:flex-row items-center pb-4">
-              <CalendarMonth className="flex flex-col md:flex-row items-center"/>
-              <Typography variant="body1" className="ml-center">
+          <div className="flex flex-col">
+            <div className="flex pb-4">
+              <CalendarMonth />
+              <Typography variant="body1" className="ml-4">
                 Volta
               </Typography>
             </div>
             <TextField
-              className="bg-white rounded-xl items-center"
+              className="bg-white rounded-xl"
               id="outlined-basic"
               placeholder="Insira a data de volta"
               variant="outlined"
@@ -88,11 +88,11 @@ export default function MainSearch() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center mx-4">
+        <div className="flex lg:flex-row sm:flex-col items-center mx-4">
           <div className="flex flex-col">
-            <div className="flex flex-col md:flex-row items-center pb-4">
-              <PeopleAlt className="flex flex-col md:flex-row items-center"/>
-              <Typography variant="body1" className="ml-auto">
+            <div className="flex pb-4">
+              <PeopleAlt />
+              <Typography variant="body1" className="ml-4">
                 Passageiros
               </Typography>
             </div>
@@ -107,11 +107,11 @@ export default function MainSearch() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center mx-4">
-          <div className="flex flex-col md:flex-row">
-            <div className="flex flex-col md:flex-row items-center pb-4">
+        <div className="flex lg:flex-row sm:flex-col items-center mx-4">
+          <div className="flex flex-col">
+            <div className="flex pb-4">
               <AirlineSeatReclineNormal />
-              <Typography variant="body1" className="ml-auto">
+              <Typography variant="body1" className="ml-4">
                 Classe
               </Typography>
             </div>
@@ -126,7 +126,7 @@ export default function MainSearch() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-between w-full">
+      <div className="flex flex-row justify-between w-full">
         <FormControl className="mt-4">
           <RadioGroup
             row
@@ -138,10 +138,10 @@ export default function MainSearch() {
             <FormControlLabel value="somente ida" control={<Radio />} label="Somente ida" />
             <FormControlLabel value="multidestinos" control={<Radio />} label="Multidestinos" />
           </RadioGroup>
-        </FormControl >
+        </FormControl>
         <Link href="/ticket-list">
           <Button
-            className="flex flex-col md:flex-row rounded-xl bg-white text-purple my-4"
+            className="flex lg:flex-row sm:flex-col rounded-xl bg-white text-purple my-4"
             variant="contained"
             startIcon={<Search />}
           >

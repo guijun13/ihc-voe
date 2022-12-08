@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function TicketCard() {
   return (
-    <div className="m-4 flex flex-row items-center justify-between mx-4 px-8 py-4 rounded-xl bg-gray-light text-white min-h-full">
+    <div className="flex flex-col lg:flex-row m-4 flex flex-row items-center justify-between mx-4 px-8 py-4 rounded-xl bg-gray-light text-white min-h-full">
       <div>
         <div className="m-4 flex flex-row items-center justify-around">
           <div className="m-4">
@@ -81,7 +81,7 @@ export default function TicketCard() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-around">
+      <div className="flex flex-col lg:flex-row flex flex-row items-center justify-around">
         <Typography className="text-black" variant="h6">
           R$ 1.000,00
         </Typography>
